@@ -27,8 +27,11 @@ export -f command_exists;
 
 $sh_c "apt update";
 
+./install-openssh.sh;
+./install-anydesk.sh;
 ./install-docker.sh;
 ./install-bind9.sh;
 ./install-netplan.sh;
+./notebook-cover.sh;
 
-$sh_c "autoremove";
+$sh_c "apt autoremove && reboot";
