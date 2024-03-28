@@ -1,0 +1,18 @@
+# Let NetworkManager manage all devices on this system
+network:
+  version: 2
+  renderer: networkd
+  wifis:
+    $INTERFACE:
+      dhcp4: false
+      dhcp6: false
+      addresses:
+        - $IP_COMPUTER/$MASK
+      routes:
+        - to: default
+          via: $IP_NETWORK
+      access-points:
+        "$WIFI_NAME":
+          password: "$PASSWORD"
+      nameservers:
+        addresses: [$IP_COMPUTER]
