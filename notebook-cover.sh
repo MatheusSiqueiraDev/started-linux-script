@@ -5,5 +5,4 @@ destination_file=/etc/systemd/logind.conf
 
 $sh_c "
     sed -i 's/${default}/${new_config}/g' $destination_file &&
-    service systemd-logind restart
 ";
