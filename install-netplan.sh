@@ -3,7 +3,7 @@ variables=(IP_COMPUTER MASK IP_NETWORK WIFI_NAME PASSWORD INTERFACE);
 template_file=$PWD/templates/1-network-manager-all.yaml;
 destination_file=/etc/netplan/1-network-manager-all.yaml;
 
-yes | $sh_c "apt remove netplan.io netplan* && apt-get -y install netplan.io";
+yes | $sh_c "apt-get -y install netplan.io netplan";
 
 if command_exists netplan; then
     #Copy template

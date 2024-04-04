@@ -1,5 +1,5 @@
 #Install bind9
-yes | $sh_c "apt remove bind9 bind* && apt install bind9"
+yes | $sh_c "apt install bind9 bind"
 
 if command_exists bind; then
     echo "Bind is installed"

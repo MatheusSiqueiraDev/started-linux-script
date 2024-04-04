@@ -5,10 +5,3 @@ yes | $sh_c "
     apt update &&
     apt install anydesk
 ";
-
-if command_exists anydesk; then
-    anydesk -v;
-    echo "Anydesk is installed";
-else
-    echo "Anydesk is not installed";
-fi
